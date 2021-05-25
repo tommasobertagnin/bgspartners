@@ -17,7 +17,8 @@ defmodule BgspartnersWeb.Router do
   scope "/", BgspartnersWeb do
     pipe_through :browser
 
-    live "/", PageLive, :index
+    live "/", HomepageLive, :index
+    live "/fattura-elettronica", FatturaElettronicaLive, :index
   end
 
   # Other scopes may use custom stacks.

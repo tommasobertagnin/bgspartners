@@ -1,4 +1,4 @@
-defmodule BgspartnersWeb.PageLive do
+defmodule BgspartnersWeb.HomepageLive do
   use BgspartnersWeb, :live_view
 
   @impl true
