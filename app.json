@@ -1,0 +1,14 @@
+{
+  "name": "bgspartners.com",
+  "description": "Our company website",
+  "keywords": [
+    "dokku",
+    "elixir",
+    "phoenix"
+  ],
+  "scripts": {
+    "dokku": {
+      "postdeploy": "mix ecto.migrate"
+    }
+  }
+}

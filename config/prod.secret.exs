@@ -12,9 +12,11 @@ database_url =
     """
 
 config :bgspartners, Bgspartners.Repo,
-  # ssl: true,
-  url: database_url,
-  pool_size: String.to_integer(System.get_env("POOL_SIZE") || "10")
+  username: "postgres",
+  password: "postgres",
+  database: "awesomeapdb",
+  url: System.get_env("DATABASE_URL"),
+  pool_size: String.to_integer(System.get_env("POOL_SIZE") || "15")
 
 secret_key_base =
   System.get_env("SECRET_KEY_BASE") ||
