@@ -27,6 +27,10 @@ body {
   font-size: 16px;
 }
 
+p {
+  line-height: 1.666em;
+}
+
 /* typography */
 h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code {
   font-size: 1em;
@@ -189,13 +193,6 @@ strong {
   body {
     font-size: 18px;
   }
-}
-
-/* utility classes */
-.section-title {
-  line-height: 0.9em;
-  margin: 0;
-  padding: 0;
 }
 
 /* RESPONSIVE */
