@@ -10,12 +10,17 @@ defmodule BgspartnersWeb.Router do
     plug :put_secure_browser_headers
   end
 
+  pipeline :cookieless_browser do
+    plug :accepts, ["html"]
+    plug :put_root_layout, {BgspartnersWeb.LayoutView, :cookieless_root}
+  end
+
   pipeline :api do
     plug :accepts, ["json"]
   end
 
   scope "/", BgspartnersWeb do
-    pipe_through :browser
+    pipe_through :cookieless_browser
 
     live "/", HomepageLive, :index
     live "/fattura-elettronica", FatturaElettronicaLive, :index
